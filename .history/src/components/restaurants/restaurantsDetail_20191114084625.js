@@ -44,7 +44,7 @@ export default class RestaurantsDetail extends Component {
 
     render() {
         const { restaurantsItems } = this.state
-        // console.log("=================  restaurantsItems ", restaurantsItems)
+        console.log("=================  restaurantsItems ", restaurantsItems)
         let restName = restaurantsItems ? restaurantsItems.name : ''
         let resLocation = restaurantsItems && restaurantsItems.location ?
             <div >

@@ -29,14 +29,14 @@ export default class Countries extends Component {
         this.setState({ restaurants: response.data.restaurants });
       })
       .catch(error => {
-        console.log("getMenu Err", error);
+        // console.log("getMenu Err", error);
       });
   };
 
   handleCardDetail = (e, restaurant) => {
     e.preventDefault();
-    console.log("this.props ", this.props);
-    console.log("###################  restaurant ", restaurant);
+    // console.log("this.props ", this.props);
+    // console.log("###################  restaurant ", restaurant);
     this.props.isData(restaurant);
     this.props.history.push(
       `/detail/${restaurant.name}&rest=${restaurant.R.res_id}`
@@ -44,7 +44,7 @@ export default class Countries extends Component {
   };
 
   componentDidMount = () => {
-    console.log("this.props.match.params.query   ===> ", this.props);
+    // console.log("this.props.match.params.query   ===> ", this.props);
     this.getCountriesByName(this.props.match.params.query);
     this.getCategories();
   };
@@ -56,15 +56,12 @@ export default class Countries extends Component {
   }
 
   faveConllection = faveData => {
-    // console.log("isFave ", faveData)
-    // this.setState({ DataFave: faveData.name })
-
     const faves = [...this.state.faves];
-    const filmIndex = faves.indexOf(faveData);
-    if (filmIndex === -1) {
+    const Index = faves.indexOf(faveData);
+    if (Index === -1) {
       faves.push(faveData);
     } else {
-      faves.splice(filmIndex, 1);
+      faves.splice(Index, 1);
     }
     this.setState({ faves });
   };
@@ -80,11 +77,11 @@ export default class Countries extends Component {
         headers: headers
       })
       .then(response => {
-        console.log("response.data ", response.data);
+        // console.log("response.data ", response.data);
         this.setState({ categories: response.data.categories });
       })
       .catch(error => {
-        console.log("getMenu Err", error);
+        // console.log("getMenu Err", error);
       });
   };
 
@@ -95,7 +92,7 @@ export default class Countries extends Component {
 
   render() {
     let { restaurants, categories } = this.state;
-    console.log("faves  ", this.state.faves);
+    // console.log("faves  ", this.state.faves);
 
     return (
       <Fragment>

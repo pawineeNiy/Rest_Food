@@ -8,7 +8,7 @@ export default class Fave extends Component {
 
     render() {
         let { faveList } = this.props
-        // console.log("faveList ---> ", faveList)
+        console.log("faveList ---> ", faveList)
         let img_thumb_url = faveList && faveList.photos ? faveList.photos[0].photo.thumb_url : thumb_default
         return (
             <Fragment>

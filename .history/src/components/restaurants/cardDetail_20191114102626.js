@@ -14,8 +14,8 @@ export default class CardDetail extends Component {
 
   handleCard = (e, restaurant) => {
     e.preventDefault();
-    // console.log("this.props ", this.props);
-    // console.log("restaurant ", restaurant);
+    console.log("this.props ", this.props);
+    console.log("restaurant ", restaurant);
     this.props.isDetail(e, restaurant);
     // this.props.history.push(`/detail/${restaurant.name}`);
   };

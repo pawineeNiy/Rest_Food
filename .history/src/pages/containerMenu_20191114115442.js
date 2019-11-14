@@ -13,7 +13,7 @@ export default class Menu extends Component {
 
     handleSearchCountries = (e, countries) => {
         e.preventDefault();
-        // console.log("this.props.history ", this.props.history)
+        console.log("this.props.history ", this.props.history)
         this.props.history.push(`/countries/${countries}`);
 
     }
@@ -21,7 +21,7 @@ export default class Menu extends Component {
     getAddressData = () => {
         axios.get("http://ip-api.com/json")
             .then((response) => {
-                // console.log("response.data ", response.data)
+                console.log("response.data ", response.data)
                 this.setState({ location: response.data })
             })
             .catch((error) => {
@@ -49,7 +49,7 @@ export default class Menu extends Component {
 
     OnClickSearch = (e) => {
         e.preventDefault();
-        // console.log("this.props.history ", this.props.history)
+        console.log("this.props.history ", this.props.history)
         if (this.state.searchText && this.state.searchText.length > 0) {
             this.props.history.push(`/search/${this.state.searchText}`);
         }
@@ -67,7 +67,7 @@ export default class Menu extends Component {
 
     handleChange = (event) => {
         this.setState({ searchText: event.target.value });
-        // console.log("searchText ", this.state.searchText)
+        console.log("searchText ", this.state.searchText)
     }
 
     componentDidMount = () => {

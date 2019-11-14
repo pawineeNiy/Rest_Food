@@ -15,7 +15,7 @@ export default class Home extends Component {
 
   handleRestaurantsCard = (restaurant) => {
     this.setState({ restaurantData: restaurant })
-    // console.log("_____________handleRestaurantsCard __________", restaurant)
+    console.log("_____________handleRestaurantsCard __________", restaurant)
   }
 
   render() {
