@@ -1,7 +1,11 @@
 .fas {
   margin-left: 10px;
 }
-
+.bt-m1{
+  color: #212529;
+  background-color: #555555;
+  
+}
 .published-date {
   border: 1px solid #999999;
   border-radius: 3px;

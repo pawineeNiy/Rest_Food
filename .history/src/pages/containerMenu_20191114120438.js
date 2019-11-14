@@ -127,7 +127,7 @@ export default class Menu extends Component {
                                     </i>
                                     &nbsp;
                                     <i>
-                                        <button className="btn btn-dark b-m2" onClick={(e) => this.OnClickSearch(e)} type="submit">Search</button>
+                                        <button className="btn bt-m1 b-m2" onClick={(e) => this.OnClickSearch(e)} type="submit">Search</button>
                                     </i>
                                 </ul>
 
